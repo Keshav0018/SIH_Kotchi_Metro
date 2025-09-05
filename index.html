@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kotchi Metro - Fleet Status Report</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="imgs/sih-logo.png" alt="Smart India Hackathon" class="logo" />
+      <h1>MetroFleet Planner - SIH DJSW181</h1>
+      <nav>
+        <a href="index.html">Fleet Status</a>
+        <a href="#">Job Orders</a>
+        <a href="#">What-If Simulator</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-header">
+        <h2>
+          Fleet Induction Overview – Scheduled Deployments for 06-Sep-2025
+        </h2>
+      </div>
+
+      <div class="summary-cards">
+        <div class="card green">Revenue Service: 5</div>
+        <div class="card yellow">Standby: 2</div>
+        <div class="card red">Inspection Bay: 3</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Train ID</th>
+            <th>Fitness Certificates</th>
+            <th>Job-Card Status</th>
+            <th>Mileage (km)</th>
+            <th>Cleaning Status</th>
+            <th>Stabling Bay</th>
+            <th>Branding Priority</th>
+            <th>Conflict Alerts</th>
+            <th>Recommended Action</th>
+            <th>Actual Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>KM-101</td>
+            <td class="green">Valid (RS/Signal/Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1200</td>
+            <td class="green">Done</td>
+            <td>Bay 1</td>
+            <td>High</td>
+            <td>
+              Branding Coverage Incomplete
+              <button
+                class="view-cert"
+                onclick="alert('Showing branding report for KM-103')"
+              >
+                View Details
+              </button>
+            </td>
+            <td
+              class="green"
+              title="All checks passed: Fitness OK, Job-Card Closed, Mileage Balanced, Cleaning Done, Branding High"
+            >
+              Revenue Service
+            </td>
+            <td>
+              <select>
+                <option selected>Revenue Service</option>
+                <option>Standby</option>
+                <option>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>KM-103</td>
+            <td class="green">Valid (RS/Signal/Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1300</td>
+            <td class="green">Done</td>
+            <td>Bay 3</td>
+            <td>Medium</td>
+            <td>-</td>
+
+            <td
+              class="green"
+              title="All checks OK: Mileage Balanced, Branding Medium"
+            >
+              Revenue Service
+            </td>
+            <td>
+              <select>
+                <option selected>Revenue Service</option>
+                <option>Standby</option>
+                <option>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>KM-111</td>
+            <td class="green">Valid (RS/Signal/Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1195</td>
+            <td class="green">Done</td>
+            <td>Bay 1</td>
+            <td>Meduim</td>
+            <td>-</td>
+            <td class="green" title="All checks OK → Revenue Service">
+              Revenue Service
+            </td>
+            <td>
+              <select>
+                <option selected>Revenue Service</option>
+                <option>Standby</option>
+                <option>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>KM-108</td>
+            <td class="green">Valid (RS/Signal/Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1210</td>
+            <td class="green">Done</td>
+            <td>Bay 4</td>
+            <td>Medium</td>
+            <td>-</td>
+            <td class="green" title="All checks OK → Revenue Service">
+              Revenue Service
+            </td>
+            <td>
+              <select>
+                <option selected>Revenue Service</option>
+                <option>Standby</option>
+                <option>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>KM-106</td>
+            <td class="green">Valid (RS/Signal/Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1220</td>
+            <td class="yellow">Pending</td>
+            <td>Bay 2</td>
+            <td>High</td>
+            <td>
+              Cleaning Left But Branding Coverage Incomplete
+              <button
+                class="view-cert"
+                onclick="alert('Showing branding report for KM-104')"
+              >
+                View detais
+              </button>
+            </td>
+            <td
+              class="green"
+              title="Cleaning pending but Branding Priority High → sent to Revenue Service"
+            >
+              Revenue Service
+            </td>
+            <td>
+              <select>
+                <option selected>Revenue Service</option>
+                <option>Standby</option>
+                <option>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>KM-104</td>
+            <td class="green">Valid (RS/Signal/Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1800</td>
+            <td class="green">Done</td>
+            <td>Bay 4</td>
+            <td>Medium</td>
+            <td>
+              Mileage higher than recommended
+              <button
+                class="view-cert"
+                onclick="alert('Showing branding report for KM-104')"
+              >
+                View mileage report
+              </button>
+            </td>
+            <td
+              class="yellow"
+              title="Fitness OK, Job-Card Closed, Cleaning Done but Branding Exposure Low → Standby"
+            >
+              Standby
+            </td>
+            <td>
+              <select>
+                <option>Revenue Service</option>
+                <option selected>Standby</option>
+                <option>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>KM-107</td>
+            <td class="green">Valid (RS/Signal/Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1190</td>
+            <td class="green">Done</td>
+            <td>Bay 3</td>
+            <td>Low</td>
+            <td>-</td>
+            <td
+              class="yellow"
+              title="All checks OK, Branding Priority Low → Standby"
+            >
+              Standby
+            </td>
+            <td>
+              <select>
+                <option>Revenue Service</option>
+                <option selected>Standby</option>
+                <option>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td>KM-102</td>
+            <td class="red">Expired (RS)</td>
+            <td class="green">Closed</td>
+            <td>1150</td>
+            <td class="green">Done</td>
+            <td>Bay 2</td>
+            <td>Medium</td>
+            <td>
+              Fitness Expired (Rolling Stock)
+              <button
+                class="view-cert"
+                onclick="alert('Showing Rolling Stock certificate for KM-102')"
+              >
+                View Certificate
+              </button>
+            </td>
+            <td
+              class="red"
+              title="Fitness Expired from Rolling Stock → Inspection Bay"
+            >
+              Inspection Bay
+            </td>
+            <td>
+              <select>
+                <option>Revenue Service</option>
+                <option>Standby</option>
+                <option selected>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>KM-105</td>
+            <td class="red">Expired (Signal)</td>
+            <td class="green">Closed</td>
+            <td>1100</td>
+            <td class="green">Done</td>
+            <td>Bay 5</td>
+            <td>Medium</td>
+            <td>
+              Fitness Expired (Signal)
+              <button
+                class="view-cert"
+                onclick="alert('Showing Signal certificate for KM-105')"
+              >
+                View Certificate
+              </button>
+            </td>
+            <td
+              class="red"
+              title="Fitness Expired from Signal → Inspection Bay"
+            >
+              Inspection Bay
+            </td>
+            <td>
+              <select>
+                <option>Revenue Service</option>
+                <option>Standby</option>
+                <option selected>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>KM-110</td>
+            <td class="red">Expired (Telecom)</td>
+            <td class="green">Closed</td>
+            <td>1120</td>
+            <td class="green">Done</td>
+            <td>Bay 5</td>
+            <td>Medium</td>
+            <td>
+              Fitness Expired (Telecom)
+              <button
+                class="view-cert"
+                onclick="alert('Showing Telecom certificate for KM-110')"
+              >
+                View Certificate
+              </button>
+            </td>
+            <td
+              class="red"
+              title="Fitness Expired from Telecom → Inspection Bay"
+            >
+              Inspection Bay
+            </td>
+            <td>
+              <select>
+                <option>Revenue Service</option>
+                <option>Standby</option>
+                <option selected>Inspection Bay</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="export-div">
+        <button class="export-btn">Export Fleet Schedule</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 MetroFleet Planner | Smart India Hackathon</p>
+    </footer>
+  </body>
+</html>
